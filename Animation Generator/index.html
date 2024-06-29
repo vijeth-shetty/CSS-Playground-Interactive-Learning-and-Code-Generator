@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h4><a href="../Home Page/index.html">Home</a></h4>
+        </div>
+        <div class="main">
+        <div class="left">
+        <div class="form-group">
+            <label for="animation-name">Animation Name:</label>
+            <input type="text" id="animation-name" placeholder="Enter animation name">
+        </div>
+        <div class="form-group">
+            <label for="animation-duration">Animation Duration (s):</label>
+            <input type="text" id="animation-duration" placeholder="Enter duration in seconds">
+        </div>
+        <div class="form-group">
+            <label for="animation-timing-function">Animation Timing Function:</label>
+            <select id="animation-timing-function">
+                <option value="linear">linear</option>
+                <option value="ease">ease</option>
+                <option value="ease-in">ease-in</option>
+                <option value="ease-out">ease-out</option>
+                <option value="ease-in-out">ease-in-out</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="animation-iteration-count">Animation Iteration Count:</label>
+            <input type="text" id="animation-iteration-count" placeholder="Enter count (0 for infinity)">
+        </div>
+        <div class="form-group">
+            <label for="animation-direction">Animation Direction:</label>
+            <select id="animation-direction">
+                <option value="normal">normal</option>
+                <option value="reverse">reverse</option>
+                <option value="alternate">alternate</option>
+                <option value="alternate-reverse">alternate-reverse</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="animation-fill-mode">Animation Fill Mode:</label>
+            <select id="animation-fill-mode">
+                <option value="none">none</option>
+                <option value="forwards">forwards</option>
+                <option value="backwards">backwards</option>
+                <option value="both">both</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="center">
+        <div class="animated-object" id="animated-object">
+         Animate Me!!
+        </div>
+    </div>
+
+    <div class="right">
+        <h2>Generated CSS</h2>
+        <textarea id="generated-css" readonly></textarea>
+        <button id="copy-css">Copy CSS</button>
+    </div>
+</div>
+       
+        <div id="keyframes-container">
+            <h2>Keyframes</h2>
+            <div class="keyframe">
+                <label>Time (%):</label>
+                <input type="text" class="keyframe-time" placeholder="e.g., 0, 50, 100">
+                <label>Property:</label>
+                <select class="keyframe-property">
+                    <option value="transform">transform</option>
+                    <option value="opacity">opacity</option>
+                    <option value="background-color">background-color</option>
+                    <option value="color">color</option>
+                </select>
+                <label>Value:</label>
+                <input type="text" class="keyframe-value" placeholder="Enter value">
+            </div>
+        </div>
+        
+
+        <button id="add-keyframe">Add Keyframe</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

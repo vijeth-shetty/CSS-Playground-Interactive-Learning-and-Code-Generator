@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h4><a href="../Home Page/index.html">Home</a></h4>
+    </div>
+    <div class="container">
+        <div class="main">
+            <div class="image-upload">
+                <img src="BCK.jpg" id="uploaded-image"  alt="Uploaded Image">
+                <!--<input type="file" id="image-selector" accept="image/*" />-->
+            </div>
+            <div class="code-container">
+                <textarea id="styles" rows="4" cols="50" readonly></textarea>
+                <button id="copy-styles" onclick="copyStyles()">Copy!</button>
+            </div>
+        </div>
+        <div class="settings">
+            <div class="rule-wrapper">
+                <label for="blur">Blur</label>
+                <input type="range" id="blur" min="0" max="40" value="0"/>
+            </div>
+            <div class="rule-wrapper">
+                <label for="brightness">Brightness</label>
+                <input type="range" id="brightness" min="10" max="200" value="100"/>
+            </div>
+            <div class="rule-wrapper">
+                <label for="contrast">Contrast</label>
+                <input type="range" id="contrast" min="0" max="200" value="100"/>
+            </div>
+            <div class="rule-wrapper">
+                <label for="grayscale">Grayscale</label>
+                <input type="range" id="grayscale" min="0" max="100" value="0"/>
+            </div>
+            <div class="rule-wrapper">
+                <label for="hue-rotate">Hue-Rotate</label>
+                <input type="range" id="hue-rotate" min="0" max="180" value="0"/>
+            </div>
+            <div class="rule-wrapper">
+                <label for="saturate">Saturate</label>
+                <input type="range" id="saturate" min="0" max="200" value="100"/>
+            </div>
+            <div class="rule-wrapper">
+                <label for="sepia">Sepia</label>
+                <input type="range" id="sepia" min="0" max="100" value="0"/>
+            </div>
+            <div class="rule-wrapper">
+                <label for="opacity">Opacity</label>
+                <input type="range" id="opacity" min="0" max="100" value="100"/>
+            </div>
+            <div class="rule-wrapper">
+                <label for="invert">Invert</label>
+                <input type="range" id="invert" min="0" max="100" value="0"/>
+            </div>
+        </div>
+        <div class="reset-btn">
+            <button class="reset" onclick="window.location.reload()">Reset Filters </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
